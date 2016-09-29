@@ -1,3 +1,5 @@
 platforms/android/cordova/build
 platforms/android/CordovaLib/build
 platforms/browser/cordova/build
+platforms/android/.gradle/*/taskArtifacts
+platforms/browser/build
