@@ -38,3 +38,11 @@ clean:
 try: osx
 	$(CORDOVA) run osx
 
+
+# cordova create myApp org.apache.cordova.myApp myApp
+# cordova plugin add cordova-plugin-camera --save
+# cordova platform add android --save
+# cordova requirements android
+# cordova build android --verbose
+# cordova run android
+# cordova build android --release -- --keystore="..\android.keystore" --storePassword=android --alias=mykey

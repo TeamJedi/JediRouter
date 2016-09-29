@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.github.TeamJedi.JediRouter.android"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.github.TeamJedi.JediRouter.android"
+        },
+        "org.apache.cordova.shell-exec": {
+            "PACKAGE_NAME": "com.github.TeamJedi.JediRouter.android"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.github.TeamJedi.JediRouter.android"
+        }
+    }
+}
