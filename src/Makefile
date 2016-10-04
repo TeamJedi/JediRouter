@@ -1,7 +1,7 @@
 CORDOVA=PATH=../node_modules/.bin:$(PATH) cordova
 APPNAME=JediRouter
 
-all: android browser
+all: android
 
 www: www/css/*.css www/img/*.png www/*.html www/js/*.js
 
@@ -11,12 +11,6 @@ android: ./platforms/android/assets ./platforms/android/build/outputs/apk/androi
 
 ./platforms/android/assets:
 	mkdir -p platforms/android/assets
-
-browser: $(shell find www/ -type f -print)
-	$(CORDOVA) build browser
-
-./platforms/osx/build/$(APPNAME).app/Contents/MacOS/$(APPNAME): $(shell find www/ -type f -print)
-	$(CORDOVA) build osx
 
 ./platforms/android/build/outputs/apk/android-armv7-debug.apk: $(shell find www/ -type f -print)
 	$(CORDOVA) build android
@@ -32,12 +26,9 @@ browser: $(shell find www/ -type f -print)
 
 clean:
 	rm -fr platforms/android/build || true
-	rm -fr platforms/browser/build || true
-	rm -fr platforms/osx/build || true
 
-try: osx
-	$(CORDOVA) run osx
-
+try:
+	$(CORDOVA) emulate android
 
 # cordova create myApp org.apache.cordova.myApp myApp
 # cordova plugin add cordova-plugin-camera --save
